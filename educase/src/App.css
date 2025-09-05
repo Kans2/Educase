@@ -1,5 +1,5 @@
 body {
-  background-color: white;
+  background-color:#fff;
   margin: 0;
   padding: 0;
   /* Use 'Rubik' from Google Fonts and a fallback sans-serif font */
@@ -27,7 +27,7 @@ body {
   padding: 0 20px 40px; /* Adjust padding to match design */
   box-sizing: border-box;
   border-radius: 8px; /* optional (phone look) */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional shadow */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* optional shadow */
 }
 
 /* Text content left aligned */
@@ -121,6 +121,7 @@ body {
   flex-direction: column;
   padding: 0 20px 40px; /* Adjust padding to match the design */
   box-sizing: border-box;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* optional shadow */
 }
 
 /* Content area for text and form */
@@ -224,6 +225,7 @@ body {
   /* Adjust top padding to match the design's visual start point */
   padding:20px 30px 50px; 
   box-sizing: border-box;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); /* optional shadow */
 }
 
 /* Content area for text and form */
@@ -337,111 +339,100 @@ body {
   cursor: pointer;
 }
 
-/*Settings thing */
-
-/* Wrapper to center the card */
+/* Wrapper: full screen center */
 .profile-wrapper {
+  width: 100%;
+  height: 100vh;
+  background-color: #ececec;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* full screen center */
-  background-color:white;
 }
 
-/* Main card */
+/* Container like a mobile screen */
 .profile-container {
   width: 375px;
-  height: 100%;
-  border: 1px solid #e0e0e0;
-  border-radius: 4px;
+  height: 100vh;
   background-color: #f7f8f9;
-  font-family: Arial, sans-serif;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Header */
 .profile-header {
-  padding: 20px 20px;
-  border-bottom: 1px solid #f0f0f0;
-  background-color: white;
-  font-size: 14px;
-  color: #333;
+  width: 91%;
+  font-size: 20px;
+  font-weight: 600;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-/* Profile section */
+/* Section */
 .profile-section {
+  border-bottom: 1px dashed #ccc;
+  padding: 16px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Profile details */
+.profile-details {
   display: flex;
   align-items: center;
-  padding: 16px;
+  gap: 12px;
+  margin-bottom: 12px;
 }
 
-/* Profile image */
 .profile-pic-wrapper {
   position: relative;
+  width: 64px;
+  height: 64px;
 }
 
 .profile-pic {
-  width: 50px;
-  height: 50px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-/* Purple edit icon */
 .edit-icon {
   position: absolute;
   bottom: 0;
-  right: 0;
-  background-color: #6c5ce7;
-  color: #fff;
+  right: 6px;
+  background: #6c25ff;
+  color: white;
+  padding: 4px;
   border-radius: 50%;
-  font-size: 12px;
-  padding: 2px 5px;
-  line-height: 1;
-}
-
-/* Text info */
-.profile-info {
-  margin-left: 12px;
-}
-
-.profile-name {
-  font-weight: bold;
-  font-size: 14px;
-  color: #000;
-}
-
-.profile-email {
-  font-size: 13px;
-  color: #555;
-}
-
-/* Description */
-.profile-description {
-  font-size: 12px;
-  color:black;
-  line-height: 1.5;
-  padding: 0 16px 12px 16px;
-}
-
-/* Dotted divider */
-.profile-divider {
-  border-bottom: 1px dotted #ddd;
-  margin: 0 16px;
-}
-/* Purple camera icon container */
-.edit-icon {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: #6c5ce7;
-  color: #fff;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-name {
+  font-weight: 600;
+  font-size: 16px;
+  color: #333;
+}
+
+.profile-email {
+  font-size: 12px;
+  color: #777;
+}
+
+.profile-description {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #666;
+  font-weight: 500;
 }

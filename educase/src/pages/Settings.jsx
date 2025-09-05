@@ -1,11 +1,23 @@
-import React from "react";
-import { useSelector } from "react-redux"; // to fetch values from redux
-import { FiCamera } from "react-icons/fi";   
-import profileImg from "../assets/images.jpeg"; // replace with your profile image
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { FiCamera } from "react-icons/fi";
+import defaultProfileImg from "../assets/profile.png";
+
 
 export default function Profile() {
-  // Get user data from redux store
   const user = useSelector((state) => state.user);
+
+  // local state for profile picture
+  const [profilePic, setProfilePic] = useState(defaultProfileImg);
+
+  // handle file upload
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const imageURL = URL.createObjectURL(file);
+      setProfilePic(imageURL);
+    }
+  };
 
   return (
     <div className="profile-wrapper">
@@ -13,30 +25,44 @@ export default function Profile() {
         {/* Header */}
         <div className="profile-header">Account Settings</div>
 
-        {/* Profile Info */}
+        {/* Profile Section */}
         <div className="profile-section">
-          <div className="profile-pic-wrapper">
-            <img src={profileImg} alt="Profile" className="profile-pic" />
-            <div className="edit-icon">
-              <FiCamera size={12} />
+          <div className="profile-details">
+            {/* Profile Picture */}
+            <div className="profile-pic-wrapper">
+              <img src={profilePic} alt="Profile" className="profile-pic" />
+
+              {/* Camera Icon with hidden input */}
+              <label htmlFor="profile-upload" className="edit-icon">
+                <FiCamera size={12} />
+              </label>
+              <input
+                type="file"
+                id="profile-upload"
+                accept="image/*"
+                style={{ display: "none" }}
+                onChange={handleImageChange}
+              />
+            </div>
+
+            {/* User Info */}
+            <div className="profile-info">
+              <p className="profile-name">{user.fullName || "Guest User"}</p>
+              <p className="profile-email">
+                {user.emailAddress || "guest@example.com"}
+              </p>
             </div>
           </div>
 
-          <div className="profile-info">
-            <div className="profile-name">{user.fullName|| "Guest User"}</div>
-            <div className="profile-email">{user.emailAddress|| "guest@example.com"}</div>
-          </div>
+          {/* Description */}
+          <p className="profile-description">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error
+            possimus sit animi quaerat deleniti necessitatibus, neque nostrum
+            iste quia tempora.
+          </p>
         </div>
-
-        {/* Description */}
-        <p className="profile-description">
-          Lorem Ipsum Dolor Sit Amet, Consetetur Sadipscing Elitr, Sed Diam Nonumy
-          Eirmod Tempor Invidunt Ut Labore Et Dolore Magna Aliquyam Erat, Sed Diam
-        </p>
-
-        {/* Dotted Divider */}
-        <div className="profile-divider"></div>
       </div>
     </div>
   );
 }
+
