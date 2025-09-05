@@ -1,0 +1,447 @@
+body {
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  /* Use 'Rubik' from Google Fonts and a fallback sans-serif font */
+  font-family: 'Rubik', sans-serif; 
+}
+
+/* Outer wrapper fills full screen */
+.landing-wrapper {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center; /* vertical center */
+  background: white;
+  height: 100vh;
+  width: 100%; /* take full width */
+}
+
+/* Fixed mobile design size */
+.landing-container {
+  width: 375px; /* same as XD */
+  height: 100%; /* full height */
+  background: #f7f8f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Align content to the bottom */
+  padding: 0 20px 40px; /* Adjust padding to match design */
+  box-sizing: border-box;
+  border-radius: 8px; /* optional (phone look) */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* optional shadow */
+}
+
+/* Text content left aligned */
+.content {
+  text-align: left;
+  margin-bottom: 24px;
+}
+
+.content h2 {
+  font-size: 28px; /* as per XD */
+  /* Rubik Medium has a font-weight of 500. The design indicates a weight of 'Medium' */
+  font-weight: 500; 
+  color:#1D2226;
+  margin-bottom: 8px; /* spacing below heading */
+  font-weight: bold;
+}
+
+.content p {
+  font-size: 16px; /* body text size is 16px in design, not 14px */
+  font-weight: 400; /* Regular */
+  color: #5f5f5f; /* lighter gray */
+  line-height: 1.4;
+  margin: 0;
+  max-width: 231px; /* match XD text width */
+}
+
+/* Button group at bottom */
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Buttons full width with rounded corners */
+.btn-primary {
+  width: 100%;
+  background: #6a0dff; /* Primary button color */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px; /* Button text size is 16px in design, not 14px */
+  font-weight: 500; /* Medium */
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  width: 100%;
+  background: #ebe6f9; /* Secondary button color */
+  color: #1D2226; /* Change text color to match the design */
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px; /* Button text size is 16px in design, not 14px */
+  font-weight: 500; /* Medium */
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background: #ddd7f5;
+}
+
+/* General body styles and font import */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+  background-color: white;
+}
+
+/* Outer wrapper for centering content on the page */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+}
+
+/* Fixed container for mobile screen dimensions (375x812) */
+.login-container {
+  width: 375px;
+  height: 812px;
+   background: #f7f8f9;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 40px; /* Adjust padding to match the design */
+  box-sizing: border-box;
+}
+
+/* Content area for text and form */
+.login-content {
+  text-align: left;
+  padding-top: 140px; /* Top padding to place content lower on the page */
+}
+
+/* Heading styling */
+.login-content h2 {
+  font-size: 28px;
+  font-weight: 500; /* Rubik Medium */
+  color: #1D2226;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Paragraph styling */
+.login-content p {
+  font-size: 18px; /* Rubik Regular 18px */
+  font-weight: 400;
+  color: #5f5f5f;
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* Form layout and spacing */
+.login-form {
+  margin-top: 40px;
+}
+
+/* Individual form field group */
+.form-group {
+  margin-bottom: 24px;
+  position: relative; /* For positioning the label */
+}
+
+/* Label styling */
+.form-group label {
+  font-size: 16px; /* Rubik Medium 16px */
+  font-weight: 500;
+  color: #6a0dff; /* Primary purple color */
+  position: absolute;
+  top: -10px; /* Raise the label above the input field */
+  left: 10px;
+  background: #fff;
+  padding: 0 4px;
+}
+
+/* Input field styling */
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 12px;
+  font-size: 16px;
+  color: #1D2226;
+  border: 1px solid #dcdcdc; /* Subtle gray border */
+  border-radius: 6px;
+  background: transparent; /* Transparent background */
+}
+
+.form-group input::placeholder {
+  color: #aaaaaa;
+}
+
+/* Login button styling */
+.login-btn {
+  width: 100%;
+  background: #cbcbcb; /* Gray color for inactive button */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px; /* Rubik Medium 16px */
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+
+/* Outer wrapper for centering content on the page */
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  /* Align items to the top to ensure content starts from the top */
+  align-items: flex-start; 
+  min-height: 100vh; /* Use min-height to allow content to extend if needed */
+  width: 100%;
+  background-color: white;
+}
+
+/* Fixed container for mobile screen dimensions */
+.signup-container {
+  width: 375px; /* Exact width from design */
+  /* Remove fixed height to allow content to dictate container height */
+  /* height: 812px; */ 
+  background: #f7f8f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Aligns content to the top */
+  /* Adjust top padding to match the design's visual start point */
+  padding:20px 30px 50px; 
+  box-sizing: border-box;
+}
+
+/* Content area for text and form */
+.signup-content {
+  text-align: left;
+  /* No top padding here as it's handled by .signup-container */
+}
+
+/* Heading styling */
+.signup-content h2 {
+  font-size: 28px; /* Rubik Medium 28px */
+  font-weight: 500; 
+  color: #1D2226;
+  margin-bottom: 30px; 
+  font-weight: bold;
+}
+
+/* Form layout and spacing */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Individual form field group */
+.form-group {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+/* Label styling */
+.form-group label {
+  font-size: 13px; /* Rubik Regular 13px */
+  font-weight: 400;
+  color: #6a0dff; /* Primary purple color */
+  position: absolute;
+  top: -8px; /* Lift label above input */
+  left: 10px;
+  background: #f7f8f9;
+  padding: 0 4px;
+  z-index: 1; /* Ensure label is above input field */
+}
+
+/* New style for the asterisk */
+.required-asterisk {
+  color: #FF0000; /* Red color for the asterisk */
+  margin-left: 2px; /* Small spacing between text and asterisk */
+}
+
+/* Input field styling */
+.form-group input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px 12px;
+  font-size: 16px; /* A readable font size for input text */
+  color: #1D2226;
+  border: 1px solid #dcdcdc; /* Subtle gray border */
+  border-radius: 6px;
+  background: transparent;
+}
+
+.form-group input::placeholder {
+  color: #c9c9c9; /* Lighter placeholder text */
+}
+
+/* Radio button group styling */
+.radio-group {
+  margin-bottom: 30px;
+}
+
+.radio-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: #1D2226;
+}
+
+/* Apply asterisk style to radio label as well */
+.radio-label .required-asterisk {
+  color: #FF0000; /* Red color for the asterisk */
+  margin-left: 2px;
+}
+
+.radio-options {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px; /* Space between radio buttons */
+  align-items: center;
+}
+
+.radio-options input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #6a0dff; /* Primary color for selected radio */
+}
+
+.radio-option-label {
+  font-size: 16px; /* Rubik Medium 16px */
+  font-weight: 500;
+  color: #1D2226;
+}
+
+/* Create Account button styling */
+.create-account-btn {
+  width: 100%;
+  background: #6a0dff; /* Primary button color */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px;
+  font-size: 16px; /* Rubik Medium 16px */
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/*Settings thing */
+
+/* Wrapper to center the card */
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* full screen center */
+  background-color:white;
+}
+
+/* Main card */
+.profile-container {
+  width: 375px;
+  height: 100%;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  background-color: #f7f8f9;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.profile-header {
+  padding: 20px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: white;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Profile section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+/* Profile image */
+.profile-pic-wrapper {
+  position: relative;
+}
+
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Purple edit icon */
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #6c5ce7;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2px 5px;
+  line-height: 1;
+}
+
+/* Text info */
+.profile-info {
+  margin-left: 12px;
+}
+
+.profile-name {
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+}
+
+.profile-email {
+  font-size: 13px;
+  color: #555;
+}
+
+/* Description */
+.profile-description {
+  font-size: 12px;
+  color:black;
+  line-height: 1.5;
+  padding: 0 16px 12px 16px;
+}
+
+/* Dotted divider */
+.profile-divider {
+  border-bottom: 1px dotted #ddd;
+  margin: 0 16px;
+}
+/* Purple camera icon container */
+.edit-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #6c5ce7;
+  color: #fff;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
