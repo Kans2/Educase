@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux"; // to fetch values from redux
 import { FiCamera } from "react-icons/fi";   
-import profileImg from "../assets/react.svg"; // replace with your profile image
+import profileImg from "../assets/images.jpeg"; // replace with your profile image
 
 export default function Profile() {
   // Get user data from redux store
